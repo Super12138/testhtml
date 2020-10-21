@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>测试网页</title>
+<link rel="stylesheet" href="src/css/layui.css">
+<style type="text/css">
+#test {
+    top: 50%;
+    left: 320px;
+}
+body::-webkit-scrollbar {
+width: 6px;
+height: 4px;
+}
+body::-webkit-scrollbar-thumb {
+border-radius: 15px;
+-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+background: rgba(0,0,0,0.2);
+}
+body::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+border-radius: 0;
+background: rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body>
+<ul class="layui-nav">
+  <li class="layui-nav-item  layui-this"><a href="">首页</a></li>
+  <li class="layui-nav-item"> <a href="javascript:;">季节</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">春天</a></dd>
+      <dd><a href="javascript:;">夏天</a></dd>
+      <dd><a href="javascript:;">秋天</a></dd>
+      <dd><a href="javascript:;">冬天</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">大数据<span class="layui-badge-dot"></span></a></li>
+  <li class="layui-nav-item"> <a href="javascript:;">解决方案</a>
+    <dl class="layui-nav-child">
+      <dd><a href="">移动模块</a></dd>
+      <dd class="layui-this"><a href="">后台模版</a></dd>
+      <dd><a href="">电商平台</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">社区</a></li>
+  <li class="layui-nav-item"> <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a> </li>
+</ul>
+<script src="/src/layui.js"></script> 
+<script>
+layui.use(['element', 'form'], function(){
+  var element = layui.element;
+  
+  element.on('tab(test)', function(data){
+    console.log(this, data);
+  });
+  
+  element.on('nav(test)', function(elem){
+    console.log(elem)
+  });
+  
+  element.on('collapse(test)', function(data){
+    console.log(data);
+  });
+});
+</script>
+</body>
+</html>
