@@ -89,5 +89,18 @@ layui.use('carousel', function(){
   });
 });
 </script>
+	<p></p>
+	<script type="text/javascript">
+
+if (localStorage.pagecount)
+	{
+	localStorage.pagecount=Number(localStorage.pagecount) +1;
+	}
+else
+	{
+	localStorage.pagecount=1;
+	}
+document.write("您已访问本网页: " + localStorage.pagecount + " time(s).");
+</script>
 </body>
 </html>
